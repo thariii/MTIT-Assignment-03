@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style='margin : 10px; overflow: hidden;'>
+    <a-scene embedded arjs>
+        <a-assets>
+          <a-asset-item id="tree" src="sts.gltf"></a-asset-item>
+        </a-assets>
+        <a-marker type='pattern' url='t.patt'>  
+            <a-entity gltf-model="#tree" scale="0.05 0.05 0.05" rotation="0 180 0" position="0 1 0"></a-entity>
+            <a-text value="Statue of Senenmut" position="-1 0 1" color="yellow" scale="1 1 1">
+            <a-text value="IT17114936 - Arachchi T.L.P." position="-0.5 0 1" color="yellow" scale="1 1 1">  
+        </a-marker>    
+        <a-entity camera></a-entity> 
+    </a-scene>       
+  </body>
+</html>
